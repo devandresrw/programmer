@@ -9,8 +9,12 @@ import {
   SkillsLayer, 
   DjosLayer,
   WorksLayer, 
-  ContactLayer
+  ContactLayer,
+  BtnSlide
  } from "@/components";
+import { HiArrowSmallLeft, HiArrowSmallRight } from "react-icons/hi2";
+
+
 
 export default function MyHome(){
   const view = useIntro(state => state.view)
@@ -22,7 +26,7 @@ export default function MyHome(){
 
     return (
       <>
-        {view && (<Preloader />)}
+        {view && <Preloader />}
         <div className="relative h-dvh w-dvw overflow-hidden">
           <div
             ref={scrollContainer}
@@ -30,7 +34,7 @@ export default function MyHome(){
             style={{ scrollSnapType: "x mandatory" }}
           >
             <div
-              className="flex-shrink-0 h-dvh w-dvw"
+              className="flex-shrink-0 h-dvh w-dvw "
               style={{ scrollSnapAlign: "start" }}
             >
               <StatementLayer />
@@ -66,18 +70,12 @@ export default function MyHome(){
               <ContactLayer />
             </div>
           </div>
-          <button
-            onClick={scrollLeft}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded"
-          >
-            Left
-          </button>
-          <button
-            onClick={scrollRight}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded"
-          >
-            Right
-          </button>
+          <BtnSlide onClick={scrollLeft} isLoR="l">
+            <HiArrowSmallLeft size={34} className="fill-border" />
+          </BtnSlide>
+          <BtnSlide onClick={scrollRight} isLoR="r">
+            <HiArrowSmallRight size={34} className="fill-border" />
+          </BtnSlide>
         </div>
       </>
     );
