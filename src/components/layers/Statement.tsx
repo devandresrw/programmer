@@ -1,9 +1,17 @@
-import { GlassContainer } from "@/components"
+import { 
+    BackScene, 
+    GlassContainer,
+    Box
+ } from "@/components"
 
 
 export const StatementLayer = () => {
     return(
-        <div className="h-dvh w-dvw flex justify-center items-center bg-red-500">
+        <div className="relative h-dvh w-dvw flex 
+        justify-center items-center">
+            <BackScene>
+                <Box />
+            </BackScene>
             <GlassContainer>
                 <h1>Statement Layer</h1>
             </GlassContainer>

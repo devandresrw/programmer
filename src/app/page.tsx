@@ -1,5 +1,5 @@
 'use client'
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useIntro } from "@/stores";
 import {Preloader} from '@/components'
 import { useHorizontalScroll } from "@/hooks"
@@ -17,12 +17,32 @@ import { HiArrowSmallLeft, HiArrowSmallRight } from "react-icons/hi2";
 
 
 export default function MyHome(){
+
   const view = useIntro(state => state.view)
   const {scrollContainer, scrollRight, scrollLeft} = useHorizontalScroll()
-    
-  useEffect(() => {
+  const [visibleIndex, setVisibleIndex] = useState(0)
+  
+  const components = [
+    StatementLayer,
+    AboutLayer,
+    SkillsLayer,
+    DjosLayer,
+    WorksLayer,
+    ContactLayer,
+  ];
 
-  }, [view])
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = scrollContainer.current!.scrollLeft;
+      const index = Math.round(scrollPosition / window.innerWidth);
+      setVisibleIndex(index);
+    };
+
+    scrollContainer.current!.addEventListener("scroll", handleScroll);
+    return () => {
+      scrollContainer.current!.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollContainer]);
 
     return (
       <>
@@ -33,42 +53,15 @@ export default function MyHome(){
             className="flex overflow-x-auto overflow-y-hidden h-dvh w-dvw"
             style={{ scrollSnapType: "x mandatory" }}
           >
-            <div
-              className="flex-shrink-0 h-dvh w-dvw "
-              style={{ scrollSnapAlign: "start" }}
-            >
-              <StatementLayer />
-            </div>
-            <div
-              className="flex-shrink-0 h-dvh w-dvw"
-              style={{ scrollSnapAlign: "start" }}
-            >
-              <AboutLayer />
-            </div>
-            <div
-              className="flex-shrink-0 h-dvh w-dvw"
-              style={{ scrollSnapAlign: "start" }}
-            >
-              <SkillsLayer />
-            </div>
-            <div
-              className="flex-shrink-0 h-dvh w-dvw"
-              style={{ scrollSnapAlign: "start" }}
-            >
-              <DjosLayer />
-            </div>
-            <div
-              className="flex-shrink-0 h-dvh w-dvw"
-              style={{ scrollSnapAlign: "start" }}
-            >
-              <WorksLayer />
-            </div>
-            <div
-              className="flex-shrink-0 h-dvh w-dvw"
-              style={{ scrollSnapAlign: "start" }}
-            >
-              <ContactLayer />
-            </div>
+            {components.map((Component, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 h-dvh w-dvw"
+                style={{ scrollSnapAlign: "start" }}
+              >
+                {visibleIndex === index && <Component />}
+              </div>
+            ))}
           </div>
           <BtnSlide onClick={scrollLeft} isLoR="l">
             <HiArrowSmallLeft size={34} className="fill-border" />

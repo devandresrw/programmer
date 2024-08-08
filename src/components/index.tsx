@@ -10,3 +10,5 @@ export { Preloader } from '@/components/intro/Preloader';
 //Components 
 export { BtnSlide } from '@/components/utils/BtnSlide';
 export { GlassContainer } from '@/components/utils/GlassContainer';
+export { BackScene } from '@/components/utils/BackScene';
+export { Box } from '@/components/utils/Box';
