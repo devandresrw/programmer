@@ -1,6 +1,6 @@
 import { BackScene, GlassContainer, Box } from "@/components";
 
-export const SkillsLayer = () => {
+const SkillsLayer = () => {
   return (
     <div
       className="relative h-dvh w-dvw flex 
@@ -15,3 +15,5 @@ export const SkillsLayer = () => {
     </div>
   );
 };
+
+export default SkillsLayer;

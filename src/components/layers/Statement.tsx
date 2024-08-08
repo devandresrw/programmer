@@ -5,7 +5,7 @@ import {
  } from "@/components"
 
 
-export const StatementLayer = () => {
+export default function StatementLayer () {
     return(
         <div className="relative h-dvh w-dvw flex 
         justify-center items-center">
