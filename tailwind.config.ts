@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "glass-bg": "rgba(255,255,227,0.12)",
-        "border": "rgba(255,255,227,0.4)",
+        "glass-bg": "rgba(255, 255, 255, 0.02)",
+        border: "rgba(255,255,227,0.4)",
       },
       boxShadow: {
         "sha-btn": "0 4px 30px rgba(0,0,0,0.1)",

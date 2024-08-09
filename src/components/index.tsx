@@ -12,3 +12,14 @@ export { BtnSlide } from '@/components/utils/BtnSlide';
 export { GlassContainer } from '@/components/utils/GlassContainer';
 export { BackScene } from '@/components/utils/BackScene';
 export { Box } from '@/components/utils/Box';
+//Stament 
+export { TextStament } from '@/components/home/TextStament';
+export { StamentScene } from '@/components/home/SceneHome'; 
+export { Dodecahedron } from "@/components/home/geometris/Tetra";
+//About
+export { TextAbout } from '@/components/about/TextAbout';
+//Djos
+export { TextDjos } from '@/components/djos/TextDjos';
+//Skills 
+export { IconsSkills } from '@/components/skills/IconsSkils';
+export { TextSkills } from '@/components/skills/TextSkils';

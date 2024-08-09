@@ -1,4 +1,4 @@
-import { BackScene, GlassContainer, Box } from "@/components";
+import { BackScene, GlassContainer, Box, TextSkills, IconsSkills } from "@/components";
 
 const SkillsLayer = () => {
   return (
@@ -10,7 +10,8 @@ const SkillsLayer = () => {
         <Box />
       </BackScene>
       <GlassContainer>
-        <h1>Statement Layer</h1>
+        <TextSkills />
+        <IconsSkills />
       </GlassContainer>
     </div>
   );

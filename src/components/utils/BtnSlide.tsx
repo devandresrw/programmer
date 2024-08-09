@@ -13,7 +13,7 @@ export const BtnSlide = ({onClick, children, isLoR}: BtnSideProps) =>{
         onClick={onClick}
         className={clsx(`absolute top-1/2 transform -translate-y-1/2
            bg-glass-bg shadow-sha-btn backdrop-blur-custom-blur
-            border border-border p-7 rounded-full z-40`,
+            border border-border p-3 rounded-full z-40`,
           {
             ['left-14']: isLoR === "l",
             ['right-14']: isLoR === "r",

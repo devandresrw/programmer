@@ -1,4 +1,9 @@
-import { BackScene, GlassContainer, Box } from "@/components";
+import { 
+  BackScene, 
+  GlassContainer, 
+  Box,
+  TextAbout
+ } from "@/components";
 
  const AboutLayer = () => {
   return (
@@ -10,7 +15,7 @@ import { BackScene, GlassContainer, Box } from "@/components";
         <Box />
       </BackScene>
       <GlassContainer>
-        <h1>Statement Layer</h1>
+        <TextAbout />
       </GlassContainer>
     </div>
   );

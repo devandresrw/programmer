@@ -1,5 +1,4 @@
 'use client'
-import { useEffect, useState } from "react";
 import { useIntro } from "@/stores";
 import { useHorizontalScroll } from "@/hooks"
 import { BtnSlide, Preloader } from "@/components";
@@ -102,7 +101,7 @@ export default function MyHome(){
               style={{ scrollSnapAlign: "start" }}>
 
               {contactInView && <ContactLayer />}
-              </div> 
+            </div> 
 
           </div>
           <BtnSlide onClick={scrollLeft} isLoR="l">
