@@ -1,4 +1,10 @@
-import { BackScene, GlassContainer, Box } from "@/components";
+import { 
+  BackScene,
+  GlassContainer, 
+  Box,
+  WrapperSliderProjects,
+  TextProjects
+ } from "@/components";
 
 const WorksLayer = () => {
   return (
@@ -10,7 +16,8 @@ const WorksLayer = () => {
         <Box />
       </BackScene>
       <GlassContainer>
-        <h1>Statement Layer</h1>
+        <TextProjects />
+        <WrapperSliderProjects />
       </GlassContainer>
     </div>
   );

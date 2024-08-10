@@ -1,4 +1,10 @@
-import { BackScene, GlassContainer, Box } from "@/components";
+import { 
+  BackScene,
+  GlassContainer, 
+  Box,
+  TextContact, 
+  FormContact,
+} from "@/components";
 
  const ContactLayer = () => {
   return (
@@ -10,7 +16,8 @@ import { BackScene, GlassContainer, Box } from "@/components";
         <Box />
       </BackScene>
       <GlassContainer>
-        <h1>Statement Layer</h1>
+        <TextContact />
+        <FormContact />
       </GlassContainer>
     </div>
   );

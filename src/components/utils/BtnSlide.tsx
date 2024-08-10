@@ -5,9 +5,10 @@ interface BtnSideProps {
     onClick: () => void;
     children: ReactNode
     isLoR?: string
+    styles?: string
 }
 
-export const BtnSlide = ({onClick, children, isLoR}: BtnSideProps) =>{
+const BtnSlide = ({onClick, children, isLoR}: BtnSideProps) =>{
     return (
       <button
         onClick={onClick}
@@ -24,3 +25,5 @@ export const BtnSlide = ({onClick, children, isLoR}: BtnSideProps) =>{
       </button>
     );
 } 
+
+export default BtnSlide;
