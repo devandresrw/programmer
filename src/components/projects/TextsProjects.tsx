@@ -1,10 +1,14 @@
 
 
 export const TextProjects = () => {
-    return(
-        <div className="text-white">
-            <h1>Projects</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus, eius. Veniam tempora neque porro. Alias illum tenetur adipisci expedita omnis vitae possimus similique hic debitis beatae. Cum quaerat quas numquam.</p>
-        </div>
-    )
+    return (
+      <div className="text-white flex flex-col justify-center 
+      items-center text-center">
+        <h1 className="heads">Algunos trabajos</h1>
+        <p className="texts">
+          Estos son algunos de los proyectos que he desarrollado desde cero, o
+          sea llevar una idea a un producto mínimo viable
+        </p>
+      </div>
+    );
 }

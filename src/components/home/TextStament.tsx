@@ -8,7 +8,7 @@ export const TextStament = () => {
       </div>
       <div className="text-white flex flex-col 
       items-center justify-center text-lg">
-        <ul className="flex gap-4">
+        <ul className="flex flex-col md:  text-center">
           <li>#WebMaster</li>
           <li>#WebDeveloper</li>
           <li>#CreativeDeveloper</li>

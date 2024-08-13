@@ -16,8 +16,10 @@ import {
         <Box />
       </BackScene>
       <GlassContainer>
-        <TextContact />
-        <FormContact />
+        <div className="flex flex-col gap-4 px-3">
+          <TextContact />
+          <FormContact />
+        </div>
       </GlassContainer>
     </div>
   );

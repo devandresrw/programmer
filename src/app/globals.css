@@ -42,3 +42,17 @@ body{
 *::-webkit-scrollbar-thumb:active {
     background-color: #FFFFE3;
 }
+
+
+.myinput{
+@apply bg-transparent outline-none focus:outline-none 
+border-b-[1px] transition-all duration-500
+ border-white/15 focus:border-white/65 px-2 py-2
+}
+
+.heads{
+    @apply text-2xl text-white uppercase font-semibold
+}
+.texts{
+    @apply text-lg text-white font-normal
+}
