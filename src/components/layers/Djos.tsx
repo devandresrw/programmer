@@ -4,6 +4,7 @@ import {
   Box,
   TextDjos
 } from "@/components";
+import { WrapperDjos } from "@/components/djos/WrapperDjos";
 
 const DjosLayer = () => {
   return (
@@ -15,7 +16,7 @@ const DjosLayer = () => {
         <Box />
       </BackScene>
       <GlassContainer>
-          <TextDjos />
+         <WrapperDjos/>
       </GlassContainer>
     </div>
   );

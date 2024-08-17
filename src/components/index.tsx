@@ -10,8 +10,10 @@ export { Preloader } from '@/components/intro/Preloader';
 //Components 
 export { default as BtnSlide } from '@/components/utils/BtnSlide';
 export { GlassContainer } from '@/components/utils/GlassContainer';
+export { GlassTitle } from '@/components/utils/GlassTitle';
 export { BackScene } from '@/components/utils/BackScene';
 export { Box } from '@/components/utils/Box';
+
 //Stament 
 export { TextStament } from '@/components/home/TextStament';
 export { StamentScene } from '@/components/home/SceneHome'; 

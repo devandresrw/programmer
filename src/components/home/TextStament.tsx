@@ -11,8 +11,8 @@ export const TextStament = () => {
       <div
         className="flex flex-col 
         items-center justify-center select-none font-jura
-        text-center text-xl tracking-wider gap-2 lg:gap-2">
-        <ul className="flex flex-col md:flex-row gap-2 lg:gap-3">
+        text-center text-xl tracking-wider gap-2 ">
+        <ul className="flex flex-col md:flex-row gap-2 ">
           <li>#WebMaster</li>
           <li>#WebDeveloper</li>
           <li>#CreativeDeveloper</li>
