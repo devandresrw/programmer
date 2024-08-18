@@ -1,4 +1,5 @@
 import { BackScene, GlassContainer, Box, TextSkills, IconsSkills } from "@/components";
+import { WrapperSkills } from "../skills/WrapperSkills";
 
 const SkillsLayer = () => {
   return (
@@ -10,8 +11,7 @@ const SkillsLayer = () => {
         <Box />
       </BackScene>
       <GlassContainer>
-        <TextSkills />
-        <IconsSkills />
+        <WrapperSkills />
       </GlassContainer>
     </div>
   );

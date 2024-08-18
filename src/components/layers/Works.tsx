@@ -5,6 +5,7 @@ import {
   WrapperSliderProjects,
   TextProjects
  } from "@/components";
+import { WrapperProjects } from "../projects/WrapperProjects";
 
 const WorksLayer = () => {
   return (
@@ -16,8 +17,7 @@ const WorksLayer = () => {
         <Box />
       </BackScene>
       <GlassContainer>
-        <TextProjects />
-        <WrapperSliderProjects />
+          <WrapperProjects />
       </GlassContainer>
     </div>
   );
