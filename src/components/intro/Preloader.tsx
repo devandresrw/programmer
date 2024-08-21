@@ -9,6 +9,10 @@ export function Preloader(){
     
     const preCon = useRef<HTMLDivElement>(null)
     const logo = useRef<HTMLImageElement>(null)
+    const phrase1 = useRef<HTMLLIElement>(null)
+    const phrase2 = useRef<HTMLLIElement>(null)
+    const phrase3 = useRef<HTMLLIElement>(null) 
+
     const notPreloaderView = useIntro(state => state.notPreloaderView)
     
     useGSAP(()=>{
@@ -19,25 +23,47 @@ export function Preloader(){
         })
 
         tl.to(logo.current, {
-          duration: 2,
+          duration: 1,
+          opacity: 1,
+          visibility: "visible",
+          ease: "sine.in",
+        }), 
+        tl.to(phrase1.current, {
+          duration: 1,
           opacity: 1,
           visibility: "visible",
           ease: "sine.in",
         }),
-          tl.to(logo.current, {
-            duration: 2,
-            opacity: 0,
-          }),
-          tl.to(logo.current, {
-            duration: 2,
-            opacity: 1,
-            visibility: "visible",
-            ease: "sine.in",
-          }),
-          tl.to(logo.current, {
-            duration: 2,
-            opacity: 0,
-          });
+        tl.to(phrase2.current, {
+          duration: 1,
+          opacity: 1,
+          visibility: "visible",
+          ease: "sine.in",
+        }),
+        tl.to(phrase3.current, {
+          duration: 1,
+          opacity: 1,
+          visibility: "visible",
+          ease: "sine.in",
+        }),
+        tl.to(phrase1.current, {
+          duration: 1,
+          opacity: 0,
+          visibility: "hidden",
+          ease: "power1.inOut",
+        }),
+        tl.to(phrase2.current, {
+          duration: 1,
+          opacity: 0,
+          visibility: "hidden",
+          ease: "power1.inOut",
+        }),
+        tl.to(phrase3.current, {
+          duration: 1,
+          opacity: 0,
+          visibility: "hidden",
+          ease: "power1.inOut",
+        })
     })
     
     return (
@@ -53,6 +79,13 @@ export function Preloader(){
             ref={logo}
             className='opacity-0'
             />
+            <div className='text-white mt-8'>
+              <ul className='flex flex-row gap-4'>
+                <li className='opacity-0' ref={phrase1}>#Creative_Developer</li>
+                <li className='opacity-0' ref={phrase2}>#WebMaster</li>
+                <li className='opacity-0' ref={phrase3}>#FullStack</li>
+              </ul>
+            </div>
         </div>
       </>
     );
