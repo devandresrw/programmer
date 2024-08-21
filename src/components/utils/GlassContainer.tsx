@@ -1,10 +1,10 @@
-import { ReactNode } from "react"
+import { ReactNode, memo } from "react"
 
 interface GlassContainerProps {
     children: ReactNode
 }
 
-export const GlassContainer = ({children}: GlassContainerProps) => {
+const GlassContainerSin = ({children}: GlassContainerProps) => {
 
     return(
         <div className="absolute z-20 bg-glass-bg 
@@ -16,3 +16,5 @@ export const GlassContainer = ({children}: GlassContainerProps) => {
         </div>
     )
 }
+
+export const GlassContainer = memo(GlassContainerSin)

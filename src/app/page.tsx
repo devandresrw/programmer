@@ -1,7 +1,7 @@
 'use client'
 import { useIntro } from "@/stores";
 import { useHorizontalScroll } from "@/hooks"
-import { BtnSlide, Preloader } from "@/components";
+import { BtnContend, BtnSlide, Preloader } from "@/components";
 import { HiArrowSmallLeft, HiArrowSmallRight } from "react-icons/hi2";
 import dynamic from "next/dynamic";
 import {useInView} from 'react-intersection-observer'
@@ -104,12 +104,12 @@ export default function MyHome(){
             </div> 
 
           </div>
-          <BtnSlide onClick={scrollLeft} isLoR="l">
+          <BtnContend onClick={scrollLeft} isLoR="l">
             <HiArrowSmallLeft size={34} className="fill-border" />
-          </BtnSlide>
-          <BtnSlide onClick={scrollRight} isLoR="r">
+          </BtnContend>
+          <BtnContend onClick={scrollRight} isLoR="r">
             <HiArrowSmallRight size={34} className="fill-border" />
-          </BtnSlide>
+          </BtnContend>
         </div>
       </>
     );
