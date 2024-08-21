@@ -11,8 +11,7 @@ export default function StatementLayer () {
     return (
       <div
         className="relative h-dvh w-dvw flex 
-        justify-center items-center bg-slate-600"
-      >
+        justify-center items-center">
         <BackScene>
             <Box />
         </BackScene>

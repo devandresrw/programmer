@@ -27,42 +27,60 @@ export function Preloader(){
           opacity: 1,
           visibility: "visible",
           ease: "sine.in",
-        }), 
-        tl.to(phrase1.current, {
+        }) 
+        .to(phrase1.current, {
           duration: 1,
           opacity: 1,
           visibility: "visible",
           ease: "sine.in",
-        }),
-        tl.to(phrase2.current, {
+        })
+        .to(phrase2.current, {
           duration: 1,
           opacity: 1,
           visibility: "visible",
           ease: "sine.in",
-        }),
-        tl.to(phrase3.current, {
+        })
+        .to(phrase3.current, {
           duration: 1,
           opacity: 1,
           visibility: "visible",
           ease: "sine.in",
-        }),
-        tl.to(phrase1.current, {
+        })
+        .to(phrase1.current, {
           duration: 1,
           opacity: 0,
-          visibility: "hidden",
-          ease: "power1.inOut",
-        }),
-        tl.to(phrase2.current, {
+          ease: "fade.out",
+        })
+        .to(phrase2.current, {
           duration: 1,
           opacity: 0,
-          visibility: "hidden",
-          ease: "power1.inOut",
-        }),
-        tl.to(phrase3.current, {
+          ease: "fade.out",
+        })
+        .to(phrase3.current, {
           duration: 1,
           opacity: 0,
-          visibility: "hidden",
-          ease: "power1.inOut",
+          ease: "fade.out",
+        }).to(phrase1.current, {
+          duration: 1,
+          opacity: 1,
+          visibility: "visible",
+          ease: "sine.in",
+        })
+        .to(phrase2.current, {
+          duration: 1,
+          opacity: 1,
+          visibility: "visible",
+          ease: "sine.in",
+        })
+        .to(phrase3.current, {
+          duration: 1,
+          opacity: 1,
+          visibility: "visible",
+          ease: "sine.in",
+        }).to(preCon.current, {
+          duration: 1,
+          opacity: 0,
+          ease: "fade.out",
         })
     })
     
@@ -80,7 +98,7 @@ export function Preloader(){
             className='opacity-0'
             />
             <div className='text-white mt-8'>
-              <ul className='flex flex-row gap-4'>
+              <ul className='flex flex-row gap-4 font-jura'>
                 <li className='opacity-0' ref={phrase1}>#Creative_Developer</li>
                 <li className='opacity-0' ref={phrase2}>#WebMaster</li>
                 <li className='opacity-0' ref={phrase3}>#FullStack</li>
