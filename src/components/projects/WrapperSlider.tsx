@@ -5,7 +5,7 @@ import { ReactNode } from 'react';
 import HumanitasProjects from '@/components/projects/Humanitas';
 import AgencyProjects from '@/components/projects/Agency';
 import CuartelProjects from '@/components/projects/Cuartel';
-
+import { BiArrowFromLeft, BiArrowFromRight } from 'react-icons/bi';
 const components = [
     HumanitasProjects,
     CuartelProjects,
@@ -15,32 +15,18 @@ const components = [
 export const WrapperSliderProjects = () => {
     const {CurrentComponent, handleNext, handlePrev} = useSlider(components);
     return (
-      <div className="text-white w-56 h-28 bg-red-300">
-        <div className="w-full h-full bg-slate-500">
+      <div className="relative text-white w-full
+      border border-white/50 rounded-lg">
+        <div className="w-full h-full">
           <CurrentComponent />
         </div>
         <BtnSlide onClick={handleNext} isLoR="l">
-          {">"}
+          <BiArrowFromLeft/>
         </BtnSlide>
         <BtnSlide onClick={handlePrev} isLoR="r">
-          {"<"}
+          <BiArrowFromRight />
         </BtnSlide>
       </div>
     );
 }
 
-interface BtnSlideProps { 
-  onClick: () => void
-  children: ReactNode
-  isLoR?: string
-  styles?: string
-}
-const BtnSlideWorks = ({onClick, children}: BtnSlideProps) => {
-  return(
-    <button
-      className=''
-    >
-      {children}
-    </button>
-  )
-}
