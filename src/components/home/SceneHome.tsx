@@ -3,7 +3,7 @@ import { Canvas, } from "@react-three/fiber";
 
 export const StamentScene = () => {
   return (
-    <div className="w-80 h-2/4 mt-10 border border-white/50
+    <div className="w-50 h-60 mt-10 border border-white/50
     rounded-lg lg:w-1/2">
       <Canvas camera={{position: [0,0,5], fov:75}}>
         <ambientLight intensity={2} />

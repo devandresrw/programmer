@@ -17,7 +17,7 @@ export const SlideDjos = () => {
          target="_blank"
          className="m-2"
        >
-         <LogoCodeWars className="w-72" />
+         <LogoCodeWars className="w-52" />
        </Link>
      ),
    },
@@ -28,7 +28,7 @@ export const SlideDjos = () => {
          target="_blank"
          className="m-2"
        >
-         <LogoFreeCodeCamp className="w-72" />
+         <LogoFreeCodeCamp className="w-52" />
        </Link>
      ),
    },
@@ -39,14 +39,14 @@ export const SlideDjos = () => {
          target="_blank"
          className="m-2"
        >
-         <LogoFrontendMentor className="w-72" />
+         <LogoFrontendMentor className="w-52" />
        </Link>
      ),
    },
    {
         contend: (
         <Link href=" " target="_blank" className="m-2">
-            <LogoHackTheBox className="w-72" />
+            <LogoHackTheBox className="w-52" />
         </Link>)
    }
  ];

@@ -95,6 +95,13 @@ export default function MyHome(){
 
               {worksInView && <WorksLayer />}
              </div>
+             <div
+              ref={worksRef}
+              className="flex-shrink-0 h-dvh w-dvw"
+              style={{ scrollSnapAlign: "start" }}>
+
+              {worksInView && <WorksLayer />}
+             </div>
             <div
               ref={contactRef}
               className="flex-shrink-0 h-dvh w-dvw"

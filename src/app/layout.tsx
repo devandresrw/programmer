@@ -3,6 +3,7 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://programmer.andresrw.com/'),
   title: "Programmer | Andrés R. W.",
   description: `Experiencias | Habilidades | Portafolio`,
   

@@ -32,6 +32,8 @@ export { default as HumanitasProjects } from "@/components/projects/Humanitas";
 export { default as CuartelProjects } from '@/components/projects/Cuartel';
 export { default as AgencyProjects } from '@/components/projects/Agency';
 export { TextProjects } from '@/components/projects/TextsProjects';
+//Codes 
+
 //Contact
 export { TextContact } from '@/components/contact/TextContact';
 export { FormContact } from '@/components/contact/FormConstact';

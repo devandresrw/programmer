@@ -12,9 +12,10 @@ const BtnContendMemo = ({onClick, children,isLoR}:BtnSideProps) => {
   return(
     <button
       onClick={onClick} 
-      className={clsx(`absolute top-1/2 z-40
+      className={clsx(`absolute bottom-8 z-40
+        lg:top-1/2 lg:bottom-60
         bg-glass-bg border border-white/50
-        rounded-full p-4`,{
+        rounded-full p-3 lg:p-4`,{
         ['left-24']: isLoR === 'l',
         ['right-24']: isLoR ===  'r' 
       })}>
@@ -27,7 +28,7 @@ const BtnSlideMemo = ({onClick, children,isLoR}:BtnSideProps) => {
   return(
     <button 
       onClick={onClick}
-      className={clsx(`absolute top-[5%]
+      className={clsx(`absolute top-[40%]
         bg-glass-bg border border-white/50
         p-2 rounded-full`,{
         ['-left-10']: isLoR === 'l',

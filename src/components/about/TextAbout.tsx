@@ -6,13 +6,10 @@ export const TextAbout = () => {
     return (
       <GlassTitle
         title="Sobre mí"
-        text="Hola, soy desarrollador full stack, me enfoco en el desarrollo
-          creativo y las aplicaciones web. He trabajado en diferentes áreas
-          durante estos años, desde agencias de publicidad, instituciones
-          educativas, bancos y organizaciones sin ánimo de lucro, en diferentes
-          roles, como desarrollador, administrador de servidores o IT, he
-          desarrollado entornos de realidad virtual, realidad aumentada y
-          entornos interactivos"
+        text="Soy desarrollador, trabajo creando aplicaciones web, 
+        administrando servicios en la nube, y testeando infraestructura.
+        Me gusta desarrollar entornos interactivos y en la actualidad
+        me interesa la web 3."
       >
         <ul className="flex justify-center gap-3">
           <li>
