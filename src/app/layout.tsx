@@ -8,9 +8,18 @@ export const metadata: Metadata = {
                y proyectos realizados`,
   openGraph:{
     title: "Programmer | Andrés R. W.",
-    description: `Aqui mi portafolio de habilidades tecnicas`,
+    description: `Aqui mi portafolio`,
     images: ['/ceo.jpg']
-  }
+  },
+  twitter:{
+    title: "Programmer | Andrés R. W.",
+    description: `Aqui`,
+    site: '@andresrw_dev',
+    images: ['/ceo.jpg'],
+    creator: '@andresrw_dev',
+
+  },
+
 };
 
 export default function RootLayout({
