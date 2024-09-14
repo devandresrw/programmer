@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   title: "Programmer | Andrés R. W.",
   description: `Experiencias | Habilidades | Portafolio`,
   
-
   openGraph:{
     title: "Programmer | Andrés R. W.",
     description: `Experiencias | Habilidades | Portafolio`,

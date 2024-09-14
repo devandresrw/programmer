@@ -27,7 +27,7 @@ const BtnSlideMemo = ({onClick, children,isLoR}:BtnSideProps) => {
   return(
     <button 
       onClick={onClick}
-      className={clsx(`absolute top-[40%]
+      className={clsx(`absolute top-[5%]
         bg-glass-bg border border-white/50
         p-2 rounded-full`,{
         ['-left-10']: isLoR === 'l',
