@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph:{
     title: "Programmer | Andrés R. W.",
     description: `Aqui mi portafolio de habilidades tecnicas`,
-    images: ['']
+    images: ['/ceo.jpg']
   }
 };
 
