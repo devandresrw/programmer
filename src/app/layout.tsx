@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Programmer | Andrés R. W.",
   description: `Aqui mi portafolio de habilidades tecnicas 
                y proyectos realizados`,
+  openGraph:{
+    title: "Programmer | Andrés R. W.",
+    description: `Aqui mi portafolio de habilidades tecnicas`,
+    images: ['']
+  }
 };
 
 export default function RootLayout({
