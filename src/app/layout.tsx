@@ -6,14 +6,19 @@ export const metadata: Metadata = {
   title: "Programmer | Andrés R. W.",
   description: `Aqui mi portafolio de habilidades tecnicas 
                y proyectos realizados`,
+  
+
   openGraph:{
     title: "Programmer | Andrés R. W.",
     description: `Aqui mi portafolio`,
-    images: ['/ceo.jpg']
+    images: ['/ceo.jpg'],
+    emails: ['contact@andresrw.com'],
+    type: 'profile',
+
   },
   twitter:{
     title: "Programmer | Andrés R. W.",
-    description: `Aqui`,
+    description: ` AquiAquiAquiAquiAquiAquiAqui`,
     site: '@andresrw_dev',
     images: ['/ceo.jpg'],
     creator: '@andresrw_dev',
