@@ -4,20 +4,22 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://programmer.andresrw.com/'),
-  title: "Programmer | Andrés R. W.",
+  title: "[ Andrés R.W. | Programmer ]",
   description: `Experiencias | Habilidades | Portafolio`,
+  robots: 'index, follow',
+  keywords: ['Andrés R.W.','Developer','Artist' ],
   
   openGraph:{
-    title: "Programmer | Andrés R. W.",
+    title: "[ Andrés R.W. | Programmer ]",
     description: `Experiencias | Habilidades | Portafolio`,
     images: ['/ceo.jpg'],
     emails: ['contact@andresrw.com'],
     type: 'profile',
     url: 'https://programmer.andresrw.com/',
-    siteName: 'Programmer | Andrés R. W.',
+    siteName: '[ Andrés R.W. | Programmer ]',
   },
   twitter:{
-    title: "Programmer | Andrés R. W.",
+    title: "[ Andrés R.W. | Programmer ]",
     description: `Experiencias | Habilidades | Portafolio`,
     site: '@andresrw_dev',
     images: ['/ceo.jpg'],

@@ -98,10 +98,10 @@ export function Preloader(){
             className='opacity-0'
             />
             <div className='text-white mt-8'>
-              <ul className='flex flex-row gap-4 font-jura'>
-                <li className='opacity-0' ref={phrase1}>#Creative_Developer</li>
-                <li className='opacity-0' ref={phrase2}>#WebMaster</li>
-                <li className='opacity-0' ref={phrase3}>#FullStack</li>
+              <ul className='flex flex-col text-center md:flex-row gap-4 font-jura'>
+                <li className='opacity-0' ref={phrase1}>#Web.Dev</li>
+                <li className='opacity-0' ref={phrase2}>#HxC</li>
+                <li className='opacity-0' ref={phrase3}>#Creative.Dev</li>
               </ul>
             </div>
         </div>
