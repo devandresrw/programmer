@@ -2,8 +2,7 @@ import {
   BackScene,
   GlassContainer, 
   Box,
-  WrapperSliderProjects,
-  TextProjects
+  
  } from "@/components";
 import { WrapperProjects } from "../projects/WrapperProjects";
 
