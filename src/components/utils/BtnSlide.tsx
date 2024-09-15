@@ -12,12 +12,11 @@ const BtnContendMemo = ({onClick, children,isLoR}:BtnSideProps) => {
   return(
     <button
       onClick={onClick} 
-      className={clsx(`absolute bottom-8 z-40
-        lg:top-1/2 lg:bottom-60
+      className={clsx(`absolute bottom-6
         bg-glass-bg border border-white/50
-        rounded-full p-3 lg:p-4`,{
-        ['left-24']: isLoR === 'l',
-        ['right-24']: isLoR ===  'r' 
+        rounded-full p-2 z-20 sm:bottom-auto sm:top-1/2`,{
+        ['left-24 sm:left-14 lg:left-20']: isLoR === 'l',
+        ['right-24 sm:right-14 lg:right-20']: isLoR ===  'r' 
       })}>
         {children}
     </button>

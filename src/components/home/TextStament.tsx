@@ -7,11 +7,13 @@ export const TextStament = () => {
           <Image src={'/logo.svg'} 
           width={200} 
           height={150} 
-          alt="Andrés R. W." />
+          alt="Andrés R. W." 
+          className="sm:w-80 "
+          />
         </div>
         <div className="">
            <ul className="flex flex-row
-           justify-center items-center gap-5">
+           justify-center items-center gap-5 sm:text-xl sm:font-medium">
              <li>#Web_Dev</li>
              <li>#HxC</li>
              <li>#Creative_Dev</li>

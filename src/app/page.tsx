@@ -118,6 +118,7 @@ export default function MyHome(){
             </div> 
 
           </div>
+          
           <BtnContend onClick={scrollLeft} isLoR="l">
             <HiArrowSmallLeft size={34} className="fill-border" />
           </BtnContend>
