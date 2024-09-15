@@ -15,8 +15,8 @@ const BtnContendMemo = ({onClick, children,isLoR}:BtnSideProps) => {
       className={clsx(`absolute bottom-6
         bg-glass-bg border border-white/50
         rounded-full p-2 z-20 sm:bottom-auto sm:top-1/2`,{
-        ['left-24 sm:left-14 lg:left-20']: isLoR === 'l',
-        ['right-24 sm:right-14 lg:right-20']: isLoR ===  'r' 
+        ['left-24 sm:left-14 lg:left-20 xl:left-30']: isLoR === 'l',
+        ['right-24 sm:right-14 lg:right-20 xl:right-30']: isLoR ===  'r' 
       })}>
         {children}
     </button>

@@ -118,12 +118,11 @@ export default function MyHome(){
             </div> 
 
           </div>
-          
           <BtnContend onClick={scrollLeft} isLoR="l">
-            <HiArrowSmallLeft size={34} className="fill-border" />
+            <HiArrowSmallLeft size={20} className="fill-border " />
           </BtnContend>
           <BtnContend onClick={scrollRight} isLoR="r">
-            <HiArrowSmallRight size={34} className="fill-border" />
+            <HiArrowSmallRight size={20} className="fill-border" />
           </BtnContend>
         </div>
       </>

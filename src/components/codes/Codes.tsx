@@ -17,8 +17,8 @@ import {
 
 const Codes = () =>{
     return(
-        <div className="w-full flex flex-row
-        justify-center gap-10 items-start">
+        <div className="w-full flex flex-col
+        items-center justify-center gap-2">
             <Frontend />
             <Backend />
         </div>
@@ -28,14 +28,14 @@ const Codes = () =>{
 const Frontend = () => {
     return (
         <Link href={'/frontend'} >
-                <div className="border rounded border-white/55 w-40
+                <div className="border rounded border-white/30 w-[70vw]
         h-full p-3">
             <h1 className="mb-3">Frontend</h1>
             <div className="flex flex-row justify-center flex-wrap gap-5">
-                <SiTypescript className={'flex-basis-1/3'} size={30} />
-                <FaReact className={'flex-basis-1/3'} size={30}/>
-                <SiNextdotjs className={'flex-basis-1/3'} size={30}/>
-                <SiThreedotjs className={'flex-basis-1/3'} size={30}/>
+                <SiTypescript className={'flex-basis-1/4 lg:flex-basis-1/3'} size={25} />
+                <FaReact className={'flex-basis-1/4 lg:flex-basis-1/3'} size={25}/>
+                <SiNextdotjs className={'flex-basis-1/4 lg:flex-basis-1/3'} size={25}/>
+                <SiThreedotjs className={'flex-basis-1/4 lg:flex-basis-1/3'} size={25}/>
             </div>
         </div>
         </Link>
@@ -45,15 +45,15 @@ const Frontend = () => {
 const Backend = () => {
     return (
         <Link href={'/fullstack'} >
-        <div className="border rounded border-white/55 w-40 p-3">
+        <div className="border rounded border-white/30 w-[70vw] p-3">
         <h1 className="mb-3">Fullstack</h1>
-            <div className="flex flex-row justify-center flex-wrap gap-5">
-                <SiNestjs className={'flex-basis-1/3'} size={30}/>
-                <SiReactivex className={'flex-basis-1/3'} size={30}/>
-                <SiMongodb className={'flex-basis-1/3'} size={30}/>
-                <BiLogoPostgresql className={'flex-basis-1/3'} size={30}/>
-                <FaNode className={'flex-basis-1/3'} size={30}/>
-                <FaDocker className={'flex-basis-1/3'} size={30}/>
+            <div className="flex flex-row justify-center flex-wrap gap-2">
+                <SiNestjs className={'flex-basis-1/4 lg:flex-basis-1/3'} size={25}/>
+                <SiReactivex className={'flex-basis-1/4 lg:flex-basis-1/3'} size={25}/>
+                <SiMongodb className={'flex-basis-1/4 lg:flex-basis-1/3'} size={25}/>
+                <BiLogoPostgresql className={'flex-basis-1/4 lg:flex-basis-1/3'} size={25}/>
+                <FaNode className={'flex-basis-1/4 lg:flex-basis-1/3'} size={25}/>
+                <FaDocker className={'flex-basis-1/4 lg:flex-basis-1/3'} size={25}/>
             </div>
         </div>
         </Link>

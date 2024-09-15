@@ -7,8 +7,7 @@ export  const TextContact = () => {
     return (
       <GlassTitle
         title="Contacto"
-        text="Si tienes un proyecto y quieres desarrollarlo conmigo, 
-          deja tus datos y me pondré en contacto contigo."
+        text=""
       >
         <FormContact />
       </GlassTitle>

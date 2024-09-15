@@ -11,14 +11,14 @@ export const GlassTitle = ({title, text, children}: GlassTitleProps) => {
     <div
       className=" text-white text-center
        flex flex-col justify-center items-center 
-       gap-7 border border-border-color
-       rounded-xl w-10/12 py-5 px-3 lg:w-2/5
+       gap-4 border border-border-color
+       rounded-xl p-4 w-[80vw] h-auto
        select-none"
     >
       <div
         className="bg-black -translate-y-9 w-auto
         border-l border-r border-border-color flex
-        justify-center items-center px-5"
+        justify-center items-center px-2"
       >
         <h2
           className="text-xl font-bold font-jura
