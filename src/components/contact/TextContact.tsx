@@ -1,4 +1,4 @@
-import { WrapperSliderProjects } from "../projects/WrapperSlider";
+
 import { GlassTitle } from "../utils/GlassTitle";
 import { FormContact } from "./FormConstact";
 
