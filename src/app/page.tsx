@@ -30,6 +30,12 @@ const WorksLayer = dynamic(
   { ssr: true }
 );
 
+const CodesLayer = dynamic(
+  () => import("@/components").then((mod) => mod.CodesLayer),
+  { ssr: true }
+);
+
+
 const ContactLayer = dynamic(
   () => import("@/components").then((mod) => mod.ContactLayer),
   { ssr: true }
@@ -49,6 +55,7 @@ export default function MyHome(){
   const { ref: djosRef, inView: djosInView } = useInView({triggerOnce: true});
   const { ref: skillsRef, inView: skillsInView } = useInView({triggerOnce: true});
   const { ref: worksRef, inView: worksInView } = useInView({triggerOnce: true});
+  const { ref: codesRef, inView: codesInView } = useInView({triggerOnce: true});
   const { ref: contactRef, inView: contactInView } = useInView({triggerOnce: true});
 
     return (
@@ -96,11 +103,11 @@ export default function MyHome(){
               {worksInView && <WorksLayer />}
              </div>
              <div
-              ref={worksRef}
+              ref={codesRef}
               className="flex-shrink-0 h-dvh w-dvw"
               style={{ scrollSnapAlign: "start" }}>
 
-              {worksInView && <WorksLayer />}
+              {codesInView && <CodesLayer />}
              </div>
             <div
               ref={contactRef}

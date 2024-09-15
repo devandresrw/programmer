@@ -5,6 +5,8 @@ export { default as DjosLayer } from "@/components/layers/Djos";
 export { default as SkillsLayer } from '@/components/layers/Skills';
 export { default as StatementLayer } from '@/components/layers/Statement';
 export { default as WorksLayer } from '@/components/layers/Works';
+export { default as CodesLayer } from '@/components/layers/Codes';
+
 //intro
 export { Preloader } from '@/components/intro/Preloader';
 //Components 
@@ -27,11 +29,6 @@ export { TextDjos } from '@/components/djos/TextDjos';
 export { IconsSkills } from '@/components/skills/IconsSkils';
 export { TextSkills } from '@/components/skills/TextSkils';
 //Projects 
-export { WrapperSliderProjects } from '@/components/projects/WrapperSlider';
-export { default as HumanitasProjects } from "@/components/projects/Humanitas";
-export { default as CuartelProjects } from '@/components/projects/Cuartel';
-export { default as AgencyProjects } from '@/components/projects/Agency';
-export { TextProjects } from '@/components/projects/TextsProjects';
 //Codes 
 
 //Contact

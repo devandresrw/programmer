@@ -1,17 +1,13 @@
 import { GlassTitle } from "../utils/GlassTitle"
-import { WrapperSliderProjects } from "./WrapperSlider";
-
-
-
+import { SliderPro } from "./ProSlider";
 
 
 export const WrapperProjects = () => {
     return (
       <GlassTitle
-        title="Algunos trabajos"
-        text="Estos son algunos de los proyectos que he desarrollado desde cero, o
-          sea llevar una idea a un producto mínimo viable">
-            <WrapperSliderProjects />
+        title="Colaboraciones"
+        text="Algunos de los proyectos en los que he colaborado">
+            <SliderPro />
       </GlassTitle>
     );
 }
