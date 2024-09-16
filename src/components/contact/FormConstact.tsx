@@ -5,7 +5,7 @@ export const FormContact = () => {
     return (
       <div
         className="text-white border border-white/15
-      p-2 rounded-sm "
+      p-2 rounded-sm w-[70vw] sm:w-[45vw] lg:w-[25vw]"
       >
         <form className="flex flex-col gap-3">
           <input type="text" placeholder="Nombre:" className="myinput" />

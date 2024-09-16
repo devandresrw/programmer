@@ -13,7 +13,7 @@ export const GlassTitle = ({title, text, children}: GlassTitleProps) => {
        flex flex-col justify-center items-center 
        gap-4 border border-border-color
        rounded-xl p-4 w-[80vw] h-auto
-       select-none"
+       select-none sm:w-[50vw] lg:w-[30vw] "
     >
       <div
         className="bg-black -translate-y-9 w-auto
