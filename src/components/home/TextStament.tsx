@@ -12,7 +12,7 @@ export const TextStament = () => {
           />
         </div>
         <div className="">
-           <ul className="flex flex-row
+           <ul className="flex flex-row text-white
            justify-center items-center gap-5 sm:text-xl sm:font-medium">
              <li>#Web_Dev</li>
              <li>#HxC</li>
