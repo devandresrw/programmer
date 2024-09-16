@@ -27,7 +27,7 @@ export const SliderPro =  () => {
                 <span
                     key={index}
                     className={`dot h-3 w-3 mx-1 rounded-full cursor-pointer ${
-                        current === index ? "bg-gray-800" : "bg-gray-400"
+                        current === index ? "border border-white/50" : "border border-white/80"
                     }`}
                     onClick={() => setCurrent(index)}
                 ></span>

@@ -85,8 +85,8 @@ export const SlideDjos = () => {
         {slides.map((_, index) => (
           <span
             key={index}
-            className={`w-3 h-3 mx-1 bg-gray-400 rounded-full cursor-pointer ${
-              index === slide ? "bg-gray-700" : ""
+            className={`w-3 h-3 mx-1 rounded-full cursor-pointer ${
+              index === slide ? "border border-white/50" : "border border-white/80"
             }`}
             onClick={() => handleClick(index)}
           ></span>
