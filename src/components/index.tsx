@@ -19,8 +19,8 @@ export { Box } from '@/components/utils/Box';
 
 //Stament 
 export { TextStament } from '@/components/home/TextStament';
-export { StamentScene } from '@/components/home/SceneHome'; 
-export { Dodecahedron } from "@/components/home/geometris/Tetra";
+export { StamentScene } from '@/components/home/SceneHome';
+
 //About
 export { TextAbout } from '@/components/about/TextAbout';
 //Djos
