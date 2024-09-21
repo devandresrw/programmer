@@ -2,18 +2,6 @@
 import { ReactNode } from "react";
 import { useRef } from "react";
 
-
-
-
-
-
-
-
-
-
-
-
-
 interface GlassTitleProps {
   title: string
   text: string
