@@ -1,12 +1,17 @@
+'use client'
 import { ReactNode } from "react";
+import { useRef } from "react";
+
+
 
 interface GlassTitleProps {
-    title: string
-    text: string
-    children: ReactNode
+  title: string
+  text: string
+  children: ReactNode
 }
 
-export const GlassTitle = ({title, text, children}: GlassTitleProps) => {
+export const GlassTitle = ({ title, text, children }: GlassTitleProps) => {
+  const glicht = useRef(null)
   return (
     <div
       className=" text-white text-center
@@ -21,6 +26,7 @@ export const GlassTitle = ({title, text, children}: GlassTitleProps) => {
         justify-center items-center px-2"
       >
         <h2
+          ref={glicht}
           className="text-xl font-bold font-jura
            bg-glass-bg backdrop-blur-custom-blur "
         >
@@ -30,7 +36,7 @@ export const GlassTitle = ({title, text, children}: GlassTitleProps) => {
       <p className="text-md font-rale -mt-10 ">
         {text}
       </p>
-        {children}
+      {children}
     </div>
   );
 };
