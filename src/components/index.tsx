@@ -1,3 +1,7 @@
+// Scenes 
+export { SceneSttings } from '@/components/utils/SceneSettings';
+export { BackScene } from '@/components/utils/BackScene';
+export { EffectsScene } from '@/components/utils/EffectsScene';
 //Layers
 export { default as AboutLayer } from '@/components/layers/AboutMe';
 export { default as ContactLayer } from '@/components/layers/Contact';
@@ -14,7 +18,6 @@ export { BtnSlide } from '@/components/utils/BtnSlide';
 export { BtnContend } from '@/components/utils/BtnSlide';
 export { GlassContainer } from '@/components/utils/GlassContainer';
 export { GlassTitle } from '@/components/utils/GlassTitle';
-export { BackScene } from '@/components/utils/BackScene';
 export { Box } from '@/components/utils/Box';
 
 //Stament 

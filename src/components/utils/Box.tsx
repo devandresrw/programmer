@@ -7,7 +7,7 @@ export const Box = () => {
   const { gl } = useThree();
 
   useEffect(() => {
-    gl.setClearColor("");
+    gl.setClearColor("black");
   }, [gl]);
 
   useFrame(() => {
@@ -18,7 +18,7 @@ export const Box = () => {
   });
 
   return (
-    <mesh ref={box} position={[5, 1, 0]}>
+    <mesh ref={box} position={[0, -5, 0]}>
       <meshBasicMaterial wireframe />
       <boxGeometry args={[2, 2, 2]} />
     </mesh>
