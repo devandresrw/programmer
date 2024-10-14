@@ -1,5 +1,6 @@
-import { BackScene, GlassContainer, Box, TextSkills, IconsSkills } from "@/components";
+import { BackScene, GlassContainer, Box, TextSkills, IconsSkills, Octahedron } from "@/components";
 import { WrapperSkills } from "../skills/WrapperSkills";
+import { EffectComposerSkills } from "../skills/EfectComposer";
 
 const SkillsLayer = () => {
   return (
@@ -8,7 +9,13 @@ const SkillsLayer = () => {
         justify-center items-center"
     >
       <BackScene>
-        <Box />
+        <EffectComposerSkills />
+        <Octahedron
+          numx={0.001}
+          numy={0.001}
+          numz={0.000}
+          size={10}
+          position={[0, 0, -10]} />
       </BackScene>
       <GlassContainer>
         <WrapperSkills />

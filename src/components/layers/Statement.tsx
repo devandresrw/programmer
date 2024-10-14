@@ -14,7 +14,7 @@ export default function StatementLayer() {
       <BackScene>
         <Torus numx={0.000} numy={0.000}
           numz={0.003}
-          size={[12, 6, 20, 20]}
+          size={[8, 6, 20, 20]}
           position={[0, 0, -10]} />
       </BackScene>
       <GlassContainer>

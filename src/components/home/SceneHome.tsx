@@ -25,8 +25,7 @@ export const StamentScene = () => {
             luminanceThreshold={0.3}
             luminanceSmoothing={0.3}
             height={200} />
-
-          <HueSaturation hue={0.5} saturation={0.8} />
+          <HueSaturation hue={0.3} saturation={0.8} />
           <Scanline />
         </EffectComposer>
         <Geometryhome />
@@ -51,7 +50,7 @@ const Geometryhome = () => {
   })
   return (
     <mesh ref={dodeca} position={[0, 0, 0]}>
-      <torusKnotGeometry args={[3, 0.3, 100, 50]} />
+      <torusKnotGeometry args={[2.2, 0.6, 80, 50]} />
       <meshBasicMaterial wireframe />
     </mesh>
   )

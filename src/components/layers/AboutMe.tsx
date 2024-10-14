@@ -2,7 +2,9 @@ import {
   BackScene,
   GlassContainer,
   Box,
-  TextAbout
+  TextAbout,
+  EffectComposerAbout,
+  Poly
 } from "@/components";
 
 const AboutLayer = () => {
@@ -12,9 +14,13 @@ const AboutLayer = () => {
         justify-center items-center"
     >
       <BackScene>
-        <Box numx={0.01} numy={0.01}
-          size={[20, 0, -5]}
-          position={[6, 6, 6]} />
+        <EffectComposerAbout />
+        <Poly
+          numx={0.001}
+          numy={0.001}
+          size={[10, 10, 45]}
+          position={[0, 0, -10]}
+        />
       </BackScene>
       <GlassContainer>
         <TextAbout />

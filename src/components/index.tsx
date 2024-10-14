@@ -1,7 +1,6 @@
 // Scenes 
 export { SceneSttings } from '@/components/utils/SceneSettings';
 export { BackScene } from '@/components/utils/BackScene';
-export { EffectsScene } from '@/components/utils/EffectsScene';
 //Layers
 export { default as AboutLayer } from '@/components/layers/AboutMe';
 export { default as ContactLayer } from '@/components/layers/Contact';
@@ -26,8 +25,10 @@ export { StamentScene } from '@/components/home/SceneHome';
 
 //About
 export { TextAbout } from '@/components/about/TextAbout';
+export { EffectComposerAbout } from '@/components/about/EffectComposer';
 //Djos
 export { TextDjos } from '@/components/djos/TextDjos';
+export { EffectComposerDjos } from '@/components/djos/EffectComposer';
 //Skills 
 export { IconsSkills } from '@/components/skills/IconsSkils';
 export { TextSkills } from '@/components/skills/TextSkils';
@@ -37,3 +38,8 @@ export { TextSkills } from '@/components/skills/TextSkils';
 //Contact
 export { TextContact } from '@/components/contact/TextContact';
 export { FormContact } from '@/components/contact/FormConstact';
+
+//Geometrys
+export { Poly } from '@/components/utils/geometries/Poly';
+export { Lathe } from '@/components/utils/geometries/Lathe';
+export { Octahedron } from '@/components/utils/geometries/Octahedron';

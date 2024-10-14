@@ -1,10 +1,12 @@
-import { 
-  BackScene, 
-  GlassContainer, 
+import {
+  BackScene,
+  GlassContainer,
   Box,
-  TextDjos
+  TextDjos,
+  EffectComposerDjos
 } from "@/components";
 import { WrapperDjos } from "@/components/djos/WrapperDjos";
+import { Lathe } from "../utils/geometries/Lathe";
 
 const DjosLayer = () => {
   return (
@@ -13,10 +15,11 @@ const DjosLayer = () => {
         justify-center items-center"
     >
       <BackScene>
-        <Box />
+        <EffectComposerDjos />
+        <Lathe numx={0.000} numy={0.002} position={[0, 0, -20]} />
       </BackScene>
       <GlassContainer>
-         <WrapperDjos/>
+        <WrapperDjos />
       </GlassContainer>
     </div>
   );

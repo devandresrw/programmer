@@ -1,5 +1,5 @@
-import { useRef, useEffect } from "react";
-import { useThree, useFrame } from "@react-three/fiber";
+import { useRef } from "react";
+import { useFrame } from "@react-three/fiber";
 import { Mesh } from "three";
 
 interface BoxProps {
