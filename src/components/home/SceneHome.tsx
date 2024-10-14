@@ -1,7 +1,14 @@
 'use client'
 import { Canvas, } from "@react-three/fiber";
-import { Torus } from "./geometris/Torus";
-import { Bloom, EffectComposer } from "@react-three/postprocessing";
+import {
+  Bloom, EffectComposer,
+  ASCII,
+  HueSaturation,
+  Scanline
+} from "@react-three/postprocessing";
+import { useRef } from "react";
+import { useThree, useFrame } from "@react-three/fiber";
+import { Mesh } from "three";
 
 export const StamentScene = () => {
   return (
@@ -12,17 +19,40 @@ export const StamentScene = () => {
         <ambientLight intensity={2} />
         <directionalLight position={[5, 5, 5]} intensity={1} castShadow />
         <pointLight position={[-5, -5, -5]} intensity={0.8} color="white" />
-        <Torus />
         <EffectComposer>
           <Bloom
-            intensity={0.1}
-            luminanceThreshold={0}
+            intensity={0.5}
+            luminanceThreshold={0.3}
             luminanceSmoothing={0.3}
             height={200} />
+
+          <HueSaturation hue={0.5} saturation={0.8} />
+          <Scanline />
         </EffectComposer>
+        <Geometryhome />
       </Canvas>
     </div>
   );
 };
 
+interface GeometriesProps {
 
+}
+
+const Geometryhome = () => {
+  const dodeca = useRef<Mesh>(null!)
+
+  useFrame(() => {
+    if (dodeca.current) {
+      dodeca.current.rotation.x += 0.001
+      dodeca.current.rotation.y += 0.001
+      dodeca.current.rotation.z += 0.001
+    }
+  })
+  return (
+    <mesh ref={dodeca} position={[0, 0, 0]}>
+      <torusKnotGeometry args={[3, 0.3, 100, 50]} />
+      <meshBasicMaterial wireframe />
+    </mesh>
+  )
+}

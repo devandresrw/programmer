@@ -1,18 +1,20 @@
-import { 
-  BackScene, 
-  GlassContainer, 
+import {
+  BackScene,
+  GlassContainer,
   Box,
   TextAbout
- } from "@/components";
+} from "@/components";
 
- const AboutLayer = () => {
+const AboutLayer = () => {
   return (
     <div
       className="relative h-dvh w-dvw flex 
         justify-center items-center"
     >
       <BackScene>
-        <Box />
+        <Box numx={0.01} numy={0.01}
+          size={[20, 0, -5]}
+          position={[6, 6, 6]} />
       </BackScene>
       <GlassContainer>
         <TextAbout />

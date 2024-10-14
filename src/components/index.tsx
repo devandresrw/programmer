@@ -18,8 +18,8 @@ export { BtnSlide } from '@/components/utils/BtnSlide';
 export { BtnContend } from '@/components/utils/BtnSlide';
 export { GlassContainer } from '@/components/utils/GlassContainer';
 export { GlassTitle } from '@/components/utils/GlassTitle';
-export { Box } from '@/components/utils/Box';
-
+export { Box } from '@/components/utils/geometries/Box';
+export { Torus } from '@/components/utils/geometries/Torus';
 //Stament 
 export { TextStament } from '@/components/home/TextStament';
 export { StamentScene } from '@/components/home/SceneHome';
