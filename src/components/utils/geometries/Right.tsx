@@ -10,10 +10,18 @@ interface RingProps {
     outerRadius: number;
     thetaSegments: number;
     phiSegments: number;
+    rotation: [number, number, number];
     position: [number, number, number];
 }
 
-export const Ring = ({ numx, numy, numz, innerRadius, outerRadius, thetaSegments, phiSegments, position }: RingProps) => {
+export const Ring = ({ 
+    numx, numy, numz,
+    innerRadius, outerRadius,
+    thetaSegments, 
+    phiSegments, position,
+    rotation
+    
+    }: RingProps) => {
     const ring = useRef<Mesh>(null!);
 
     useFrame(() => {
@@ -25,7 +33,9 @@ export const Ring = ({ numx, numy, numz, innerRadius, outerRadius, thetaSegments
     });
 
     return (
-        <mesh ref={ring} position={position}>
+        <mesh ref={ring} 
+        rotation={rotation} 
+        position={position}>
             <meshBasicMaterial wireframe />
             <ringGeometry args={[innerRadius, outerRadius, thetaSegments, phiSegments]} />
         </mesh>

@@ -5,6 +5,7 @@ import {
   TextContact, 
   FormContact,
 } from "@/components";
+import { TorusKnots } from "../utils/geometries/TorusKnot";
 
  const ContactLayer = () => {
   return (
@@ -13,7 +14,7 @@ import {
         justify-center items-center"
     >
       <BackScene>
-        <Box />
+        <TorusKnots />
       </BackScene>
       <GlassContainer>
         <TextContact />
