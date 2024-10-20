@@ -1,3 +1,4 @@
+'use client'
 import { Mesh } from "three";
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";

@@ -1,7 +1,11 @@
-import {useRef} from 'react'
+'use client'
 
-export function useHorizontalScroll(){
- 
+import { useRef } from 'react'
+
+
+
+export function useHorizontalScroll() {
+
   const scrollContainer = useRef<HTMLDivElement>(null);
 
   const scrollRight = () => {
@@ -11,7 +15,7 @@ export function useHorizontalScroll(){
         behavior: "smooth",
       });
     }
-};
+  };
 
   const scrollLeft = () => {
     if (scrollContainer.current) {
@@ -24,9 +28,9 @@ export function useHorizontalScroll(){
     }
   };
 
-   return {
-     scrollContainer,
-     scrollRight,
-     scrollLeft,
-   };
+  return {
+    scrollContainer,
+    scrollRight,
+    scrollLeft,
+  };
 }

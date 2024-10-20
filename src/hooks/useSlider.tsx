@@ -1,3 +1,4 @@
+'use client'
 import { ComponentType, useState } from "react";
 
 export const useSlider = (components: ComponentType[]) => {

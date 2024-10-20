@@ -1,3 +1,4 @@
+'use client'
 import { Mesh } from 'three';
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
@@ -14,14 +15,14 @@ interface RingProps {
     position: [number, number, number];
 }
 
-export const Ring = ({ 
+export const Ring = ({
     numx, numy, numz,
     innerRadius, outerRadius,
-    thetaSegments, 
+    thetaSegments,
     phiSegments, position,
     rotation
-    
-    }: RingProps) => {
+
+}: RingProps) => {
     const ring = useRef<Mesh>(null!);
 
     useFrame(() => {
@@ -33,9 +34,9 @@ export const Ring = ({
     });
 
     return (
-        <mesh ref={ring} 
-        rotation={rotation} 
-        position={position}>
+        <mesh ref={ring}
+            rotation={rotation}
+            position={position}>
             <meshBasicMaterial wireframe />
             <ringGeometry args={[innerRadius, outerRadius, thetaSegments, phiSegments]} />
         </mesh>
