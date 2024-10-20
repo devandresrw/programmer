@@ -1,13 +1,12 @@
 import {
   BackScene,
   GlassContainer,
-  Box,
   TextAbout,
   EffectComposerAbout,
   Poly
 } from "@/components";
 
-const AboutLayer = () => {
+export const AboutLayer = () => {
   return (
     <div
       className="relative h-dvh w-dvw flex 
@@ -29,4 +28,3 @@ const AboutLayer = () => {
   );
 };
 
-export default AboutLayer

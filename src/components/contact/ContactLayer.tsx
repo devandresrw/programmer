@@ -1,13 +1,11 @@
-import { 
+import {
   BackScene,
-  GlassContainer, 
-  Box,
-  TextContact, 
-  FormContact,
+  GlassContainer,
+  WrapperContact,
+  TorusKnots
 } from "@/components";
-import { TorusKnots } from "../utils/geometries/TorusKnot";
 
- const ContactLayer = () => {
+export const ContactLayer = () => {
   return (
     <div
       className="relative h-dvh w-dvw flex 
@@ -17,10 +15,9 @@ import { TorusKnots } from "../utils/geometries/TorusKnot";
         <TorusKnots />
       </BackScene>
       <GlassContainer>
-        <TextContact />
+        <WrapperContact />
       </GlassContainer>
     </div>
   );
 };
 
-export default ContactLayer

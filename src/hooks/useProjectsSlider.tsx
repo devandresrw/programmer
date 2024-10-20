@@ -5,14 +5,14 @@ interface hooksProps {
     interval?: number;
 }
 
-export const useSliderc = ({numCom, interval}: hooksProps) => {
+export const useProjectsSlider = ({ numCom, interval }: hooksProps) => {
     const [current, setCurrent] = useState(0);
 
     const next = () => {
-        setCurrent((e)=>(e+1)%numCom)
+        setCurrent((e) => (e + 1) % numCom)
     }
     const prev = () => {
-        setCurrent((e)=>(e-1+numCom)%numCom)
+        setCurrent((e) => (e - 1 + numCom) % numCom)
     }
 
     useEffect(() => {
@@ -20,5 +20,5 @@ export const useSliderc = ({numCom, interval}: hooksProps) => {
         return () => clearInterval(timer); // Limpiar el temporizador al desmontar
     }, [interval]);
 
-    return {current, next, prev, setCurrent}
+    return { current, next, prev, setCurrent }
 }

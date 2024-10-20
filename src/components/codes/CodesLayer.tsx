@@ -1,13 +1,12 @@
 import {
   BackScene,
   GlassContainer,
-  Box,
+  WrapperCodes,
+  EffecComposerCodes,
+  Ring
 } from "@/components"
-import { WrapperCodes } from "../codes/works"
-import { EffecComposerCodes } from "../codes/EffectComposer"
-import { Ring } from "../utils/geometries/Right"
 
-const CodesLayer = () => {
+export const CodesLayer = () => {
   return (
     <div
       className="relative h-dvh w-dvw flex 
@@ -59,7 +58,7 @@ const CodesLayer = () => {
           rotation={[0, 0, 0]}
           position={[0, 7, -6]}
         />
-         <Ring
+        <Ring
           numx={0.01}
           numy={0.03}
           numz={0.00}
@@ -81,7 +80,7 @@ const CodesLayer = () => {
           rotation={[0, 0, 0]}
           position={[12, 0, -6]}
         />
-         <Ring
+        <Ring
           numx={0.04}
           numy={0.002}
           numz={0.00}
@@ -103,7 +102,7 @@ const CodesLayer = () => {
           rotation={[0, 0, 0]}
           position={[0, -7, -6]}
         />
-        
+
       </BackScene>
       <GlassContainer>
         <WrapperCodes />
@@ -112,4 +111,3 @@ const CodesLayer = () => {
   )
 }
 
-export default CodesLayer

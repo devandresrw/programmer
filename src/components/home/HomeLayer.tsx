@@ -3,10 +3,10 @@ import {
   GlassContainer,
   Torus,
   TextStament,
-  StamentScene
+  HomeScene
 } from "@/components"
 
-export default function StatementLayer() {
+export const HomeLayer = () => {
   return (
     <div
       className="relative h-dvh w-dvw flex 
@@ -19,7 +19,7 @@ export default function StatementLayer() {
       </BackScene>
       <GlassContainer>
         <TextStament />
-        <StamentScene />
+        <HomeScene />
       </GlassContainer>
     </div>
   );

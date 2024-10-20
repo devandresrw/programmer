@@ -3,12 +3,12 @@ import {
   GlassContainer,
   Box,
   TextDjos,
-  EffectComposerDjos
+  Lathe,
+  EffectComposerDjos,
+  WrapperDjos
 } from "@/components";
-import { WrapperDjos } from "@/components/djos/WrapperDjos";
-import { Lathe } from "../utils/geometries/Lathe";
 
-const DjosLayer = () => {
+export const DjosLayer = () => {
   return (
     <div
       className="relative h-dvh w-dvw flex 
@@ -16,7 +16,11 @@ const DjosLayer = () => {
     >
       <BackScene>
         <EffectComposerDjos />
-        <Lathe numx={0.000} numy={0.002} position={[0, 0, -20]} />
+        <Lathe
+          numx={0.000}
+          numy={0.002}
+          position={[0, 0, -20]}
+        />
       </BackScene>
       <GlassContainer>
         <WrapperDjos />
@@ -25,4 +29,3 @@ const DjosLayer = () => {
   );
 };
 
-export default DjosLayer;

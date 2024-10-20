@@ -1,13 +1,13 @@
 'use client'
+import dynamic from "next/dynamic";
+import { useInView } from 'react-intersection-observer'
+import { HiArrowSmallLeft, HiArrowSmallRight } from "react-icons/hi2";
 import { useIntro } from "@/stores";
 import { useHorizontalScroll } from "@/hooks"
-import { BtnContend, BtnSlide, Preloader } from "@/components";
-import { HiArrowSmallLeft, HiArrowSmallRight } from "react-icons/hi2";
-import dynamic from "next/dynamic";
-import {useInView} from 'react-intersection-observer'
+import { BtnContend, Intro } from "@/components";
 
-const StatementLayer = dynamic(
-  () => import("@/components").then((mod) => mod.StatementLayer),
+const HomeLayer = dynamic(
+  () => import("@/components").then((mod) => mod.HomeLayer),
   { ssr: true }
 );
 const AboutLayer = dynamic(
@@ -25,8 +25,8 @@ const SkillsLayer = dynamic(
   { ssr: true }
 );
 
-const WorksLayer = dynamic(
-  () => import("@/components").then((mod) => mod.WorksLayer),
+const ProjectsLayer = dynamic(
+  () => import("@/components").then((mod) => mod.ProjectsLayer),
   { ssr: true }
 );
 
@@ -45,86 +45,86 @@ const ContactLayer = dynamic(
 
 
 
-export default function MyHome(){
+export default function MyHome() {
 
   const view = useIntro(state => state.view)
-  const {scrollContainer, scrollRight, scrollLeft} = useHorizontalScroll()
+  const { scrollContainer, scrollRight, scrollLeft } = useHorizontalScroll()
 
-  const { ref: statementRef, inView: statementInView } = useInView({triggerOnce: true});
-  const { ref: aboutRef, inView: aboutInView } = useInView({triggerOnce: true});
-  const { ref: djosRef, inView: djosInView } = useInView({triggerOnce: true});
-  const { ref: skillsRef, inView: skillsInView } = useInView({triggerOnce: true});
-  const { ref: worksRef, inView: worksInView } = useInView({triggerOnce: true});
-  const { ref: codesRef, inView: codesInView } = useInView({triggerOnce: true});
-  const { ref: contactRef, inView: contactInView } = useInView({triggerOnce: true});
+  const { ref: homeRef, inView: homeInView } = useInView({ triggerOnce: true });
+  const { ref: aboutRef, inView: aboutInView } = useInView({ triggerOnce: true });
+  const { ref: djosRef, inView: djosInView } = useInView({ triggerOnce: true });
+  const { ref: skillsRef, inView: skillsInView } = useInView({ triggerOnce: true });
+  const { ref: projectsRef, inView: projectsInView } = useInView({ triggerOnce: true });
+  const { ref: codesRef, inView: codesInView } = useInView({ triggerOnce: true });
+  const { ref: contactRef, inView: contactInView } = useInView({ triggerOnce: true });
 
-    return (
-      <>
-        {view && <Preloader />}
-        <div className="relative h-dvh w-dvw overflow-hidden">
+  return (
+    <>
+      {view && <Intro />}
+      <div className="relative h-dvh w-dvw overflow-hidden">
+        <div
+          ref={scrollContainer}
+          className="flex overflow-x-auto overflow-y-hidden h-dvh w-dvw"
+          style={{ scrollSnapType: "x mandatory" }}
+        >
           <div
-            ref={scrollContainer}
-            className="flex overflow-x-auto overflow-y-hidden h-dvh w-dvw"
-            style={{ scrollSnapType: "x mandatory" }}
+            ref={homeRef}
+            className="flex-shrink-0 h-dvh w-dvw"
+            style={{ scrollSnapAlign: "start" }}
           >
-            <div
-              ref={statementRef}
-              className="flex-shrink-0 h-dvh w-dvw"
-              style={{ scrollSnapAlign: "start" }}
-            >
-              {statementInView && <StatementLayer />}
-            </div>
-            <div
-              ref={aboutRef}
-              className="flex-shrink-0 h-dvh w-dvw"
-              style={{ scrollSnapAlign: "start" }}
-            >
-              {aboutInView && <AboutLayer />}
-            </div>
-            <div
-              ref={djosRef}
-              className="flex-shrink-0 h-dvh w-dvw"
-              style={{ scrollSnapAlign: "start" }}>
-
-              {djosInView && <DjosLayer />}
-            </div>
-            <div
-              ref={skillsRef}
-              className="flex-shrink-0 h-dvh w-dvw"
-              style={{ scrollSnapAlign: "start" }}>
-
-              {skillsInView && <SkillsLayer />}
-            </div>
-            <div
-              ref={worksRef}
-              className="flex-shrink-0 h-dvh w-dvw"
-              style={{ scrollSnapAlign: "start" }}>
-
-              {worksInView && <WorksLayer />}
-             </div>
-             <div
-              ref={codesRef}
-              className="flex-shrink-0 h-dvh w-dvw"
-              style={{ scrollSnapAlign: "start" }}>
-
-              {codesInView && <CodesLayer />}
-             </div>
-            <div
-              ref={contactRef}
-              className="flex-shrink-0 h-dvh w-dvw"
-              style={{ scrollSnapAlign: "start" }}>
-
-              {contactInView && <ContactLayer />}
-            </div> 
-
+            {homeInView && <HomeLayer />}
           </div>
-          <BtnContend onClick={scrollLeft} isLoR="l">
-            <HiArrowSmallLeft size={20} className="fill-border " />
-          </BtnContend>
-          <BtnContend onClick={scrollRight} isLoR="r">
-            <HiArrowSmallRight size={20} className="fill-border" />
-          </BtnContend>
+          <div
+            ref={aboutRef}
+            className="flex-shrink-0 h-dvh w-dvw"
+            style={{ scrollSnapAlign: "start" }}
+          >
+            {aboutInView && <AboutLayer />}
+          </div>
+          <div
+            ref={djosRef}
+            className="flex-shrink-0 h-dvh w-dvw"
+            style={{ scrollSnapAlign: "start" }}>
+
+            {djosInView && <DjosLayer />}
+          </div>
+          <div
+            ref={skillsRef}
+            className="flex-shrink-0 h-dvh w-dvw"
+            style={{ scrollSnapAlign: "start" }}>
+
+            {skillsInView && <SkillsLayer />}
+          </div>
+          <div
+            ref={projectsRef}
+            className="flex-shrink-0 h-dvh w-dvw"
+            style={{ scrollSnapAlign: "start" }}>
+
+            {projectsInView && <ProjectsLayer />}
+          </div>
+          <div
+            ref={codesRef}
+            className="flex-shrink-0 h-dvh w-dvw"
+            style={{ scrollSnapAlign: "start" }}>
+
+            {codesInView && <CodesLayer />}
+          </div>
+          <div
+            ref={contactRef}
+            className="flex-shrink-0 h-dvh w-dvw"
+            style={{ scrollSnapAlign: "start" }}>
+
+            {contactInView && <ContactLayer />}
+          </div>
+
         </div>
-      </>
-    );
+        <BtnContend onClick={scrollLeft} isLoR="l">
+          <HiArrowSmallLeft size={20} className="fill-border " />
+        </BtnContend>
+        <BtnContend onClick={scrollRight} isLoR="r">
+          <HiArrowSmallRight size={20} className="fill-border" />
+        </BtnContend>
+      </div>
+    </>
+  );
 }

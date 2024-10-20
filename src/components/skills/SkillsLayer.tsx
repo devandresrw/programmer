@@ -1,8 +1,13 @@
-import { BackScene, GlassContainer, Box, TextSkills, IconsSkills, Octahedron } from "@/components";
-import { WrapperSkills } from "../skills/WrapperSkills";
-import { EffectComposerSkills } from "../skills/EfectComposer";
+import {
+  BackScene,
+  GlassContainer,
+  WrapperSkills,
+  Octahedron,
+  EffectComposerSkills
+} from "@/components";
 
-const SkillsLayer = () => {
+
+export const SkillsLayer = () => {
   return (
     <div
       className="relative h-dvh w-dvw flex 
@@ -24,4 +29,3 @@ const SkillsLayer = () => {
   );
 };
 
-export default SkillsLayer;

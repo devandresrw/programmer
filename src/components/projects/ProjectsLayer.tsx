@@ -1,14 +1,13 @@
 import {
   BackScene,
   GlassContainer,
-  Box,
+  EffectComposerProjects,
+  Cone,
+  WrapperProjects
 
 } from "@/components";
-import { WrapperProjects } from "../projects/WrapperProjects";
-import { Cone } from "../utils/geometries/Cone";
-import { EffectComposerProjects } from "../projects/EffectComposer";
 
-const WorksLayer = () => {
+export const ProjectsLayer = () => {
   return (
     <div
       className="relative h-dvh w-dvw flex 
@@ -40,5 +39,3 @@ const WorksLayer = () => {
     </div>
   );
 };
-
-export default WorksLayer;
