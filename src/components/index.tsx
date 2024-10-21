@@ -68,11 +68,16 @@ export { CodesLayer } from '@/components/codes/CodesLayer'
 export { EffecComposerCodes } from '@/components/codes/EffectComposer'
 export { Stacks } from '@/components/codes/Stacks'
 export { WrapperCodes } from '@/components/codes/WrapperCodes'
-
-
+// Codes Frontend
+export { SelectCodes } from '@/components/codes/SelectCodes'
+export { WrapperFrontend } from '@/components/codes/frontend/WrapperFrontend'
+export { WrapperBackend } from '@/components/codes/backend/WrapperBackend'
+export { TextFrontend } from '@/components/codes/frontend/TextFrontend'
+export { TextBackend } from '@/components/codes/backend/TextBackend'
+export { MarqueFrontend } from '@/components/codes/frontend/MarqueFrontend'
 //Contact
 export { ContactLayer } from '@/components/contact/ContactLayer'
 export { FormContact } from '@/components/contact/FormConstact'
 export { WrapperContact } from '@/components/contact/WrapperContact'
 
-//Frontend
+

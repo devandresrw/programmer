@@ -3,12 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
     margin: 0;
     box-sizing: border-box;
     overflow: hidden;
     background-color: #000000;
-    color: rgba(255, 255, 225 );
+    color: rgba(255, 255, 225);
 }
 
 *::-webkit-scrollbar {
@@ -43,15 +43,38 @@ body{
 }
 
 
-.myinput{
-@apply bg-transparent outline-none focus:outline-none 
-border-b-[1px] transition-all duration-500
- border-white/15 focus:border-white/65 px-2 py-2
+.myinput {
+    @apply bg-transparent outline-none focus:outline-none border-b-[1px] transition-all duration-500 border-white/15 focus:border-white/65 px-2 py-2
 }
 
-.heads{
+.heads {
     @apply text-2xl text-white uppercase font-semibold
 }
-.texts{
+
+.texts {
     @apply text-lg text-white font-normal
+}
+
+/* styles.css */
+/* styles.css */
+.custom-blur-inner {
+    position: relative;
+
+}
+
+.custom-blur-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(10px);
+    /* Ajusta el valor del blur según tus necesidades */
+    z-index: 1;
+    margin: -10px;
+    /* Ajusta el margen para controlar el área del blur */
+    pointer-events: none;
+    /* Asegura que el pseudo-elemento no interfiera con los eventos del ratón */
 }

@@ -14,6 +14,7 @@ const config: Config = {
       },
       boxShadow: {
         "sha-btn": "0 4px 30px rgba(0,0,0,0.1)",
+        "myiner": "inset 0px 0px 150px 20px rgba(0,0,0,1)"
       },
       backdropBlur: {
         "custom-blur": "6.6px",

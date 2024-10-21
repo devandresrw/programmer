@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useStoreModalState, useSelectCodes } from '@/stores'
 import {
     SiNestjs,
     SiReactivex,
@@ -26,8 +27,10 @@ const Stacks = () => {
 }
 
 const Frontend = () => {
+    const { setModalView } = useStoreModalState()
+    const { setSelectCodes } = useSelectCodes()
     return (
-        <Link href={'/frontend'} >
+        <div onClick={() => { setModalView(false); setSelectCodes(true) }}>
             <div className="border rounded border-white/15 w-[70vw]
         h-full p-3 sm:w-[30vw] lg:w-[10vw]">
                 <h1 className="mb-3">Frontend</h1>
@@ -38,13 +41,15 @@ const Frontend = () => {
                     <SiThreedotjs className={'flex-basis-1/4 lg:flex-basis-1/3'} size={25} />
                 </div>
             </div>
-        </Link>
+        </div>
     )
 }
 
 const Backend = () => {
+    const { setModalView } = useStoreModalState()
+    const { setSelectCodes } = useSelectCodes()
     return (
-        <Link href={'/fullstack'} >
+        <div onClick={() => { setModalView(false); setSelectCodes(false) }}>
             <div className="border rounded border-white/15 w-[70vw] p-3
         h-full sm:w-[30vw] lg:w-[10vw] ">
                 <h1 className="mb-3">Fullstack</h1>
@@ -57,7 +62,7 @@ const Backend = () => {
                     <FaDocker className={'flex-basis-1/4 lg:flex-basis-1/3'} size={25} />
                 </div>
             </div>
-        </Link>
+        </div>
     )
 }
 
