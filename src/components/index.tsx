@@ -5,6 +5,7 @@ export { BackScene } from '@/components/utils/BackScene'
 export { SceneSttings } from '@/components/utils/SceneSettings'
 export { BtnContend, BtnSlide } from '@/components/utils/BtnSlide'
 export { Intro } from '@/components/intro/Intro'
+export { Loading } from '@/components/utils/Loading'
 
 //Geometries
 export { Box } from '@/components/utils/geometries/Box'
