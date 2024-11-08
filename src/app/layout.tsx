@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react"
+import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 
 
@@ -7,9 +9,9 @@ export const metadata: Metadata = {
   title: "[ Andrés R.W. | Programmer ]",
   description: `Experiencias | Habilidades | Portafolio`,
   robots: 'index, follow',
-  keywords: ['Andrés R.W.','Developer','Artist' ],
-  
-  openGraph:{
+  keywords: ['Andrés R.W.', 'Developer', 'Artist'],
+
+  openGraph: {
     title: "[ Andrés R.W. | Programmer ]",
     description: `Experiencias | Habilidades | Portafolio`,
     images: ['/ceo.jpg'],
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
     url: 'https://programmer.andresrw.com/',
     siteName: '[ Andrés R.W. | Programmer ]',
   },
-  twitter:{
+  twitter: {
     title: "[ Andrés R.W. | Programmer ]",
     description: `Experiencias | Habilidades | Portafolio`,
     site: '@andresrw_dev',
@@ -36,7 +38,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+        <GoogleAnalytics gaId="G-R68HJR1C3Z" />
+      </body>
     </html>
   );
 }
