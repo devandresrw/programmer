@@ -50,7 +50,7 @@ export default function RootLayout({
   /**
    * import { Analytics } from "@vercel/analytics/react"
 import { GoogleAnalytics } from '@next/third-parties/google'
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';  
    
    <Analytics />
         <GoogleAnalytics gaId="G-R68HJR1C3Z" />

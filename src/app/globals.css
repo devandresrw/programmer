@@ -38,7 +38,7 @@ body {
     background-color: #FFFFE3;
 }
 
-*::-webkit-scrollbar-thumb:active {
+a *::-webkit-scrollbar-thumb:active {
     background-color: #FFFFE3;
 }
 

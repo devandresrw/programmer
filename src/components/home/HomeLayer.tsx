@@ -4,7 +4,8 @@ import {
   GlassContainer,
   Torus,
   TextStament,
-  HomeScene
+  HomeScene,
+  Loading
 } from "@/components"
 
 export const HomeLayer = () => {
@@ -12,23 +13,24 @@ export const HomeLayer = () => {
     <div
       className="relative h-dvh w-dvw flex 
         justify-center items-center">
-      <Suspense fallback={null}>
+      <Suspense fallback={<Loading />}>
         <BackScene>
-          <Torus numx={0.000} numy={0.000}
-            numz={0.003}
-            size={[8, 6, 20, 20]}
-            position={[0, 0, -10]} />
+          <Suspense fallback={<Loading />}>
+            <Torus numx={0.000} numy={0.000}
+              numz={0.03}
+              size={[8, 6, 20, 20]}
+              position={[0, 0, -10]} />
+          </Suspense>
         </BackScene>
       </Suspense>
-      <Suspense fallback={null}>
+      <Suspense fallback={<Loading />}>
         <GlassContainer>
           <TextStament />
-          <Suspense fallback={null}>
+          <Suspense fallback={<Loading />}>
             <HomeScene />
           </Suspense>
         </GlassContainer>
       </Suspense>
-
     </div>
   );
 }
